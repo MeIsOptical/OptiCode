@@ -1,0 +1,138 @@
+﻿
+
+/* #region ===== INDEX TOP ===== */
+
+#index-top-title {
+    position: relative;
+    margin: 120px 20px; padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 77vh;
+    justify-content: center;
+}
+
+#index-top-title span {
+    position: absolute;
+    margin-left: 1rem;
+}
+
+/* MAIN TITLE */
+#index-top-title h1 {
+    font-size: clamp(4rem, 17vw, 50rem);
+    margin: 0; padding: 0;
+    width: 100%;
+}
+
+/* SUBTITLE */
+#index-top-title h2 {
+    font-size: clamp(1.2rem, 2.5vw, 30rem);
+    margin: 0;padding: 0;
+    width: 100%;
+    font-weight: normal;
+}
+
+/* #endregion */
+
+
+/* #region ===== INDEX SERVICES ===== */
+
+#index-services-div {
+    position: relative;
+    margin: 20px;
+    padding: 0 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#index-services-div h1 {
+    font-size: clamp(3rem, 10vw, 40rem);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.index-service {
+    text-align: left;
+    max-width: 100vw;
+    position: relative;
+    margin: 0 20px;
+    margin-bottom: 100px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+    .index-service:nth-of-type(even) {
+        text-align: right;
+        flex-direction: row-reverse;
+    }
+
+.service-content {
+    max-width: 60vw;
+    margin: 0; padding: 0 0 60px 0;
+}
+
+.service-image-container {
+    max-width: 30vw;
+    margin: auto;
+}
+
+
+.service-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 25px var(--primary-color);
+}
+
+.index-service h2 {
+    font-size: clamp(2.4rem, 5vw, 40rem);
+    margin: 0; padding: 0;
+}
+
+.index-service p {
+    font-size: clamp(1.4rem, 2vw, 7rem);
+    margin: 0; padding: 0;
+}
+
+
+
+@media (max-width: 600px) {
+    /* Target the parent container */
+    .index-service,
+    .index-service:nth-of-type(even) {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .service-content,
+    .service-image-container {
+        max-width: 100%;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+}
+/* #endregion */
+
+
+/* #region ===== NOT FOUND ===== */
+#not-found-container {
+    margin: 120px 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#not-found-container h1 {
+    font-size: clamp(3rem, 12vw, 40rem);
+    margin: 0; padding: 0;
+    width: 100%;
+}
+
+/* #endregion */

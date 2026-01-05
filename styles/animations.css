@@ -1,0 +1,46 @@
+﻿
+/* #region ===== ON/OFF FLICKER FOR THE INDEX TITLE ===== */
+.onOff {
+    animation: onOff 2s steps(1) infinite;
+}
+
+@keyframes onOff {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* #endregion */
+
+
+/* #region ===== TITLE SPACING EFFECT ===== */
+
+.letterSpacing {
+    animation: letterSpacing 3s cubic-bezier(0.2, 1, 0.7, 1);
+    white-space: nowrap;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+@keyframes letterSpacing {
+    0% {
+        letter-spacing: 3vw;
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    100% {
+        letter-spacing: 1px;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* #endregion */
+
+
+
