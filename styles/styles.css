@@ -119,6 +119,38 @@
 /* #endregion */
 
 
+/* #region ===== PHILOSOPHY QUOTE ===== */
+/* Container Spacing & Alignment */
+#philosophy-quote {
+    width: 100%;
+    margin: 20px 0; padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Quote Styling */
+#philosophy-quote p {
+    width: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #e0e0e0;
+    margin: 0; padding: 15px 50px;
+    position: relative;
+}
+
+
+@media (max-width: 600px) {
+    #philosophy-quote p {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+/* #endregion */
+
+
 /* #region ===== NOT FOUND ===== */
 #not-found-container {
     margin: 120px 20px;
