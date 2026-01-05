@@ -24,7 +24,7 @@ function loadCSS(href, callback) {
 
 
 // STYLESHEETS
-loadCSS("/styles/animations.css");
+loadCSS("styles/animations.css");
 
 
 
