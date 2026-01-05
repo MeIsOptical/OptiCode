@@ -47,7 +47,7 @@
 
 
 #index-services-div h1 {
-    font-size: clamp(3rem, 10vw, 40rem);
+    font-size: clamp(3rem, 9vw, 40rem);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -146,6 +146,51 @@
         font-size: 1.3rem;
     }
 }
+/* #endregion */
+
+
+/* #region ===== GAMES PREVIEW ===== */
+.games-preview-div {
+    position: relative;
+    margin: 100px 20px; padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.games-preview-div h1 {
+    font-size: clamp(3rem, 9vw, 40rem);
+    margin: 10px 0 0 0; padding: 0;
+    text-decoration: underline;
+}
+
+.game-preview-box {
+    text-decoration: none;
+    color: var(--text-color);
+    background: #000000b9;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    margin: 30px 0; padding: 25px;
+}
+
+.game-preview-title {
+    font-size: clamp(2rem, 5vw, 30rem);
+    margin: 0; padding: 0;
+}
+
+.game-preview-description {
+    font-size: clamp(1.2rem, 1.5vw, 10rem);
+    margin: 10px 0 0 0; padding: 0;
+}
+
+
+
+@media (max-width: 600px) {
+    .game-preview-box {
+        margin: 30px 0; padding: 20px;
+    }
+}
+
 /* #endregion */
 
 
