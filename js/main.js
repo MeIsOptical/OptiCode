@@ -1,4 +1,6 @@
 
+//#region ===== HELPERS =====
+
 // Function to dynamically load scripts
 function loadScript(src, callback) {
     let script = document.createElement('script');
@@ -20,6 +22,8 @@ function loadCSS(href, callback) {
 
     document.head.appendChild(link);
 }
+
+//#endregion
 
 
 
@@ -72,3 +76,51 @@ fetch("parts/footer.html")
     .then(data => {
         document.getElementById("footer-placeholder").innerHTML = data;
     });
+
+
+
+
+
+
+//#region SLIDESHOWS
+
+// Init
+function initSlideshows() {
+    document.querySelectorAll('.slideshow-container').forEach(container => {
+        // Set index to 0 for every slideshow on page
+        container.dataset.slideIndex = "0"; 
+    });
+}
+
+initSlideshows();
+
+function changeSlide(n, btn, event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+
+    // Find the specific container this button belongs to
+    const container = btn.closest('.slideshow-container');
+    const wrapper = container.querySelector('.slides-wrapper');
+    const slides = container.querySelectorAll('.slide');
+    
+    if (!wrapper || slides.length === 0) return;
+
+    // Get the current index for this slideshow
+    let currentIndex = parseInt(container.dataset.slideIndex || 0);
+
+    // New index
+    let newIndex = currentIndex + n;
+
+    // Looping
+    if (newIndex >= slides.length) { newIndex = 0; }
+    if (newIndex < 0) { newIndex = slides.length - 1; }
+
+    // Save
+    container.dataset.slideIndex = newIndex;
+
+    // Move
+    wrapper.style.transform = `translateX(-${newIndex * 100}%)`;
+}
+//#endregion

@@ -28,7 +28,7 @@
 
 @keyframes letterSpacing {
     0% {
-        letter-spacing: 3vw;
+        letter-spacing: 2vw;
         opacity: 0;
         transform: scaleY(0);
     }

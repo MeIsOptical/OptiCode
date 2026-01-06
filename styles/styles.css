@@ -160,17 +160,24 @@
 
 .games-preview-div h1 {
     font-size: clamp(3rem, 9vw, 40rem);
-    margin: 10px 0 0 0; padding: 0;
+    margin: 10px 0 0 0; padding: 0 0 10px 0;
     text-decoration: underline;
 }
 
 .game-preview-box {
+    display: flex; flex-direction: row;
+    position: relative;
+    width: stretch;
     text-decoration: none;
     color: var(--text-color);
-    background: #000000b9;
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 0 15px var(--primary-color);
     margin: 30px 0; padding: 25px;
+    transition: all 0.3s ease-in-out !important;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.game-preview-text-div {
+    width: 50vw;
 }
 
 .game-preview-title {
@@ -180,14 +187,35 @@
 
 .game-preview-description {
     font-size: clamp(1.2rem, 1.5vw, 10rem);
-    margin: 10px 0 0 0; padding: 0;
+    margin: 10px 0 40px; padding: 0;
 }
 
 
 
-@media (max-width: 600px) {
+.games-preview-div hr {
+    width: 80%;
+    height: 3px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    border: none;
+    margin: 2rem auto;
+}
+
+
+
+@media (max-width: 1000px) {
     .game-preview-box {
-        margin: 30px 0; padding: 20px;
+        margin: 15px 0; padding: 15px;
+        width: stretch;
+        flex-direction: column;
+    }
+
+    .game-preview-box:hover {
+        transform: none !important;
+    }
+
+    .game-preview-text-div {
+        width: 100%;
     }
 }
 
@@ -217,6 +245,76 @@
     font-size: clamp(1.5rem, 2vw, 5rem);
     margin: 10px 0 0 0; padding: 0;
     width: 100%;
+}
+
+/* #endregion */
+
+
+/* #region ===== SLIDESHOW ===== */
+
+.slideshow-container {
+    position: relative;
+    width: stretch;
+    margin: 20px; padding: 0;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    background-color: #000;
+    overflow: hidden;
+}
+
+.slides-wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--primary-color);
+    color: black;
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+
+@media (max-width: 1000px) {
+    .slideshow-container {
+        width: stretch;
+        margin: -15px; padding: 0;
+        border: none;
+        box-shadow: none;
+    }
 }
 
 /* #endregion */
