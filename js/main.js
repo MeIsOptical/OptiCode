@@ -29,7 +29,7 @@ function loadCSS(href, callback) {
 //#region ===== CSS & SCRIPTS =====
 
 // STYLESHEETS
-loadCSS("styles/animations.css");
+loadCSS("/styles/animations.css");
 
 
 
@@ -68,13 +68,13 @@ loadScript("https://unpkg.com/lenis@1.1.20/dist/lenis.min.js", () => {
 
 //#region ===== HEADER & FOOTER =====
 
-fetch("parts/header.html")
+fetch("/parts/header.html")
     .then(response => response.text())
     .then(data => {
          document.getElementById("header-placeholder").innerHTML = data;
     });
 
-fetch("parts/footer.html")
+fetch("/parts/footer.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("footer-placeholder").innerHTML = data;
