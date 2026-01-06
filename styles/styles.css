@@ -160,7 +160,7 @@
 
 .games-preview-div h1 {
     font-size: clamp(3rem, 9vw, 40rem);
-    margin: 10px 0 0 0; padding: 0 0 10px 0;
+    margin: 10px 0 0 0; padding: 0;
     text-decoration: underline;
 }
 
@@ -205,7 +205,7 @@
 
 @media (max-width: 1000px) {
     .game-preview-box {
-        margin: 15px 0; padding: 15px;
+        margin: 15px 0; padding: 10px;
         width: stretch;
         flex-direction: column;
     }
