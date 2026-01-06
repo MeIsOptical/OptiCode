@@ -12,14 +12,14 @@
     justify-content: center;
 }
 
-#index-top-title span {
+#index-top-title .onOff {
     position: absolute;
-    margin-left: 1rem;
+    margin-left: 0.2rem;
 }
 
 /* MAIN TITLE */
 #index-top-title h1 {
-    font-size: clamp(4rem, 17vw, 50rem);
+    font-size: clamp(3.5rem, 17vw, 50rem);
     margin: 0; padding: 0;
     width: 100%;
 }
@@ -119,7 +119,7 @@
 
 
 /* #region ===== PHILOSOPHY QUOTE ===== */
-/* Container Spacing & Alignment */
+
 #philosophy-quote {
     width: 100%;
     margin: 0 0 40px 0; padding: 0;
@@ -128,7 +128,7 @@
     align-items: center;
 }
 
-/* The Quote Styling */
+
 #philosophy-quote p {
     width: 50%;
     text-align: center;
@@ -251,6 +251,20 @@
 
 
 /* #region ===== SLIDESHOW ===== */
+
+
+.wavy-text span {
+  display: inline-block; /* Essential for transforms */
+  animation: jump 1s infinite;
+  
+  /* Calculate delay based on the variable we set in HTML */
+  animation-delay: calc(0.1s * var(--i)); 
+}
+
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
 
 .slideshow-container {
     position: relative;

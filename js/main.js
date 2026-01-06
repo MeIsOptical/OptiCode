@@ -26,6 +26,7 @@ function loadCSS(href, callback) {
 //#endregion
 
 
+//#region ===== CSS & SCRIPTS =====
 
 // STYLESHEETS
 loadCSS("styles/animations.css");
@@ -61,10 +62,12 @@ loadScript("https://unpkg.com/lenis@1.1.20/dist/lenis.min.js", () => {
     requestAnimationFrame(raf);
 });
 
+//#endregion
 
 
 
-// DISPLAY HEADER & FOOTER
+//#region ===== HEADER & FOOTER =====
+
 fetch("parts/header.html")
     .then(response => response.text())
     .then(data => {
@@ -77,12 +80,11 @@ fetch("parts/footer.html")
         document.getElementById("footer-placeholder").innerHTML = data;
     });
 
+//#endregion
 
 
 
-
-
-//#region SLIDESHOWS
+//#region ===== SLIDESHOWS =====
 
 // Init
 function initSlideshows() {
@@ -124,3 +126,4 @@ function changeSlide(n, btn, event) {
     wrapper.style.transform = `translateX(-${newIndex * 100}%)`;
 }
 //#endregion
+
