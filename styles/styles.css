@@ -85,6 +85,7 @@
     width: 100%;
     height: auto;
     border-radius: 15px;
+    border: 2px solid var(--primary-color);
     box-shadow: 0 0 25px var(--primary-color);
 }
 
@@ -158,6 +159,10 @@
     justify-content: center;
 }
 
+.games-preview-div .default-btn {
+    margin: 0 auto 50px auto;
+}
+
 .games-preview-div h1 {
     font-size: clamp(3rem, 9vw, 40rem);
     margin: 10px 0 0 0; padding: 0;
@@ -181,7 +186,7 @@
 }
 
 .game-preview-title {
-    font-size: clamp(2rem, 5vw, 30rem);
+    font-size: clamp(2rem, 4vw, 30rem);
     margin: 0; padding: 0;
 }
 
@@ -192,20 +197,9 @@
 
 
 
-.games-preview-div hr {
-    width: 80%;
-    height: 3px;
-    background-color: var(--primary-color);
-    box-shadow: 0 0 15px var(--primary-color);
-    border: none;
-    margin: 2rem auto;
-}
-
-
-
 @media (max-width: 1000px) {
     .game-preview-box {
-        margin: 15px 0; padding: 10px;
+        margin: 15px 0; padding: 0;
         width: stretch;
         flex-direction: column;
     }
@@ -252,7 +246,6 @@
 
 /* #region ===== SLIDESHOW ===== */
 
-
 .wavy-text span {
   display: inline-block; /* Essential for transforms */
   animation: jump 1s infinite;
@@ -274,6 +267,7 @@
     box-shadow: 0 0 15px var(--primary-color);
     background-color: #000;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .slides-wrapper {
@@ -328,6 +322,84 @@
         margin: -15px; padding: 0;
         border: none;
         box-shadow: none;
+    }
+}
+
+/* #endregion */
+
+
+/* #region ===== PROJECT PAGE ===== */
+
+.project-page-div {
+    position: relative;
+    margin: 100px 20px; padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-page-div .default-btn {
+    margin: 30px auto 10px; padding: 10px max(10%, 50px);
+    font-size: clamp(2rem, 4vw, 15rem);
+    display: block;
+    cursor: pointer;
+}
+
+.project-page-div small {
+    font-size: clamp(1.3rem, 1.5vw, 5rem);
+    color: #ff0000;
+    display: block;
+    margin: 0; padding: 0;
+    text-align: center;
+}
+
+.project-page-div h1 {
+    font-size: clamp(3rem, 9vw, 50rem);
+    margin: 0; padding: 0;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.project-page-div h2 {
+    font-size: clamp(2.5rem, 5vw, 30rem);
+    margin: 50px 0 0 0; padding: 0;
+}
+
+.project-page-div p {
+    font-size: clamp(1.2rem, 2vw, 7rem);
+    margin: 0; padding: 0;
+}
+
+.project-page-div ul {
+    margin: 0; padding: 0 20px;
+}
+
+.project-page-div li {
+    font-size: clamp(1.2rem, 2vw, 7rem);
+    margin: 0; padding: 0;
+}
+
+
+.project-page-images {
+    display: grid;
+    gap: 20px;
+    margin: 0; padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+}
+
+.project-page-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+@media (max-width: 1000px) {
+    
+    .project-page-div {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 

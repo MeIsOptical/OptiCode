@@ -44,7 +44,7 @@ body {
 
 .glowText {
     color: var(--primary-color);
-    text-shadow: 0 0 2px var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
 }
 
 
@@ -52,16 +52,31 @@ body {
     display: inline-block;
     text-decoration: none;
     color: var(--primary-color);
-    font-size: clamp(1.3rem, 2vw, 10rem);
+    font-size: clamp(1.4rem, 2vw, 10rem);
     background: #111;
     border: 3px solid var(--primary-color);
     box-shadow: 0 0 15px var(--primary-color);
-    margin: 0 auto 50px auto; padding: 10px 20px;
+    margin: 0 auto; padding: 10px 20px;
+}
+
+.default-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .default-btn:hover {
     animation: buttonHover 1s infinite ease-in-out;
     box-shadow: 0 0 20px var(--primary-color);
+}
+
+
+.default-hr {
+    width: 80%;
+    height: 3px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    border: none;
+    margin: 3rem auto;
 }
 
 /* #endregion */
@@ -97,6 +112,11 @@ header {
     font-weight: bold;
     gap: 20px;
     text-decoration: none;
+}
+
+.nav-brand span {
+    color: var(--primary-color);
+    text-shadow: 0 0 2px var(--primary-color);
 }
 
 #nav-icon {
