@@ -35,11 +35,8 @@ loadCSS("/styles/animations.css");
 
 // AOS (SMOOTH TRANSITIONS)
 loadCSS("https://unpkg.com/aos@2.3.1/dist/aos.css", () => {
-    
-    console.log("CSS Loaded. Now fetching Script...");
 
     loadScript("https://unpkg.com/aos@2.3.1/dist/aos.js", () => {
-        console.log("Script Loaded. Initializing AOS...");
         
         AOS.init({ 
             offset: 100, 
@@ -53,7 +50,7 @@ loadCSS("https://unpkg.com/aos@2.3.1/dist/aos.css", () => {
 
 // LENIS (SMOOTH SCROLL)
 loadScript("https://unpkg.com/lenis@1.1.20/dist/lenis.min.js", () => {
-    console.log("Lenis Loaded");
+
     const lenis = new Lenis();
     function raf(time) {
         lenis.raf(time);
@@ -61,6 +58,8 @@ loadScript("https://unpkg.com/lenis@1.1.20/dist/lenis.min.js", () => {
     }
     requestAnimationFrame(raf);
 });
+
+
 
 //#endregion
 
