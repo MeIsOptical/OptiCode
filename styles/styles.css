@@ -355,7 +355,7 @@
 
 .project-page-div h1 {
     font-size: clamp(3rem, 9vw, 50rem);
-    margin: 0; padding: 0;
+    margin: 40px 0 0 0; padding: 0;
     text-decoration: underline;
     text-align: center;
 }
@@ -395,11 +395,45 @@
     box-shadow: 0 0 5px var(--primary-color);
 }
 
+
+/* Playing game */
+#game-container {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999;
+    transition: all 0s;
+    background: black;
+}
+
+#game-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#game-container #close-game-btn {
+    position:absolute; top:20px; right:20px; z-index:1000;
+    display: flex;
+    text-decoration: none;
+    color: red;
+    font-size: 1.2rem;
+    background: #111;
+    border: 2px solid red;
+    box-shadow: 0 0 5px red;
+    margin: 0; padding: 10px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
 @media (max-width: 1000px) {
     
     .project-page-div {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 
