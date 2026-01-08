@@ -427,6 +427,8 @@
     width: 30px;
     height: 30px;
     align-items: center;
+    cursor: pointer;
+    justify-content: center;
 }
 
 @media (max-width: 1000px) {
